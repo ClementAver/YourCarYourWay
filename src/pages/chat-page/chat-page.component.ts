@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { User, Message, Chat } from '../../interface';
 import {
@@ -14,10 +14,11 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { AnimatedSign } from '../../component/animated-sign.component';
 
 @Component({
   selector: 'chat-page',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, AnimatedSign],
   templateUrl: './chat-page.component.html',
 })
 export class ChatPage {

@@ -12,7 +12,7 @@ const users: User[] = [
   {
     id: 1,
     email: 'jack.dalton@mail.me',
-    first_name: 'jack',
+    first_name: 'Jack',
     last_name: 'Dalton',
     password: 'password',
     role: 'customer',
