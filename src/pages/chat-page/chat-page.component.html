@@ -47,6 +47,12 @@
           Envoyer
         </button>
       </div>
+      <p *ngIf="content?.hasError('required')" class="invalid">
+        Champs requis.
+      </p>
+      <p *ngIf="content?.hasError('maxlength')" class="invalid">
+        Le commentaire doit comporter au plus 256 caractères.
+      </p>
     </form>
   </section>
 </main>
