@@ -1,4 +1,4 @@
-import { Message, User } from '../interface';
+import { Message, User } from '../interfaces';
 import { chats, users, messages } from '../mock';
 
 export function getUser(userId: number) {

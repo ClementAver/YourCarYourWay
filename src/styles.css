@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #FF3B00;
+  --color-secondary: #225EC4;
+}
+
 :root {
   font-size: 16px;
 }

@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   selector: 'chat-list-page',
   imports: [CommonModule, RouterLink],
   templateUrl: './chat-list-page.component.html',
+  styleUrl: './chat-list-page.component.css',
 })
 export class ChatListPage {
   chats = chats;

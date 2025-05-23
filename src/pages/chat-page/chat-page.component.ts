@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { User, Message, Chat } from '../../interface';
+import { User, Message, Chat } from '../../interfaces';
 import {
   getChat,
   getMessages,
@@ -14,7 +14,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { AnimatedSign } from '../../component/animated-sign.component';
+import { AnimatedSign } from '../../component/animatedSign/animated-sign.component';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -68,12 +68,5 @@ export class ChatPage {
 
   isFromEmployee(message: Message): boolean {
     return message.author_id === this.employee?.id;
-  }
-
-  getFullName(user: User | null): string {
-    if (!user) {
-      return '';
-    }
-    return `${user.first_name} ${user.last_name}`;
   }
 }

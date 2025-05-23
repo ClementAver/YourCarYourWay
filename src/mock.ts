@@ -1,20 +1,17 @@
-import { Chat, Message, User } from './interface';
+import { Chat, Message, User } from './interfaces';
 
 const users: User[] = [
   {
     id: 0,
     email: 'john.dalton@mail.me',
-    first_name: 'John',
-    last_name: 'Dalton',
-    password: 'password',
+    username: 'John Dalton',
     role: 'employee',
   },
   {
     id: 1,
     email: 'jack.dalton@mail.me',
-    first_name: 'Jack',
-    last_name: 'Dalton',
-    password: 'password',
+    username: 'Jack Dalton',
+
     role: 'customer',
   },
 ];

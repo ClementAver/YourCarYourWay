@@ -1,8 +1,8 @@
 <main>
   <section class="w-full rounded-2xl max-w-[600px]">
-    <h2 class="mb-2 px-8 w-full flex align-center">
+    <h2 class="mb-2 px-8 w-full flex align-center font-semibold">
       <animated-sign class="my-auto mr-2"></animated-sign>
-      {{ `${getFullName(employee)}, ${getFullName(customer)}` }} (conversation
+      {{ `${employee && employee.username }, ${customer && customer.username}` }} (conversation
       n°{{ chat && chat.id }})
     </h2>
     <ul class="overflow-y-auto">
@@ -16,8 +16,8 @@
       >
         <span class="font-semibold">{{
           isFromEmployee(message)
-            ? getFullName(employee)
-            : getFullName(customer)
+            ? employee && employee.username
+            : customer && customer.username
         }}</span>
         <span class="text-sm"> {{ message.publication_time }}</span
         ><br />
@@ -47,10 +47,13 @@
           Envoyer
         </button>
       </div>
-      <p *ngIf="content?.hasError('required')" class="invalid">
+      <p
+        *ngIf="content?.hasError('required') && content?.touched"
+        class="text-xs text-red-600"
+      >
         Champs requis.
       </p>
-      <p *ngIf="content?.hasError('maxlength')" class="invalid">
+      <p *ngIf="content?.hasError('maxlength')" class="text-xs text-red-600">
         Le commentaire doit comporter au plus 256 caractères.
       </p>
     </form>
